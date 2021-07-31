@@ -1,3 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap");
+
+body {
+  font-family: "Nanum Brush Script", cursive;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  padding-top: 200px;
+  font-family: "Baloo Tammudu 2", "Noto Sans KR", sans-serif;
+}
+
 .hidden {
   display: none;
+}
+.list-background {
+  background-color: #fdf5d2;
+}
+
+#background {
+  position: absolute;
+  left: 0;
+  top: 0;
+  max-width: 100%;
+  min-width: 1880px;
+  max-height: 1400px;
+  min-height: 1200px;
+  z-index: -1000;
+  filter: brightness(70%);
+}
+
+#login-form {
+  text-align: center;
+  padding-left: 130px;
+  color: white;
+  margin: 0 auto;
+}
+#login-form input {
+  text-align: center;
+  font-size: 1.4rem;
+  padding: 10px;
+  background-color: wheat;
+  border: none;
+  border-radius: 5%;
+  transition: all, 0.4s;
+}
+#login-form input:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+#login-form input:hover::-webkit-input-placeholder {
+  /*placeholder color change*/
+  color: rgb(50, 50, 50);
+}
+#login-form input:focus {
+  outline: none;
+  border-bottom: 1px solid white;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+#login-form button {
+  margin-left: 20px;
+  width: 100px;
+  height: 40px;
+  border-radius: 30px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.6);
+  color: rgb(80, 80, 80);
+  font-size: 1rem;
+  font-weight: 600;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+  outline: none;
+  cursor: pointer;
+  transition: all, 0.4s;
+}
+#login-form button:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+#login-form button:active {
+  background-color: darkgray;
+  color: white;
+  outline: none;
+}
+#clock {
+  text-align: center;
+  height: 100px;
+  font-size: 4rem;
+  margin: 10px 0px;
+  color: rgb(255, 255, 240);
+}
+#greeting {
+  text-align: center;
+  font-weight: 400;
+  margin: 0 auto;
+  font-size: 2rem;
+}
+#todo-form {
+  text-align: center;
+  padding-top: 30px;
+}
+#todo-form input {
+  text-align: center;
+  font-size: 1rem;
+  width: 540px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.8);
+  font-weight: 500;
+  border: none;
+  margin-bottom: 20px;
+  margin-top: -50px;
+}
+#manage__todo-list {
+  position: absolute;
+  bottom: 30px;
+  left: 0px;
+  z-index: 10;
+}
+
+#manage__todo-list #btn__todo-list {
+  bottom: 0px;
+  margin-top: 10px;
+  width: 140px;
+  height: 45px;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+#todo-list {
+  list-style: decimal;
+  background-color: skyblue;
+}
+#manage__todo-list #btn__todo-list:hover {
+  background-color: #2ee59d;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
+}
+#quote {
+  margin: 0 auto;
+  text-align: center;
+  color: skyblue;
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+#quote span {
+  background-color: white;
+}
+#weather {
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
 }

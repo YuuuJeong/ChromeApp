@@ -1,7 +1,8 @@
 const toDoForm = document.getElementById("todo-form");
 const toDoInput = toDoForm.querySelector("input");
 const toDoList = document.getElementById("todo-list");
-
+const toDoList_btn = document.getElementById("btn__todo-list");
+const manage = document.getElementById("manage__todo-list");
 const TODOS_KEY = "todos";
 let toDos = [];
 
@@ -21,6 +22,7 @@ function paintToDo(newTodoObj) {
   span.innerText = newTodoObj.text;
   const btn = document.createElement("button");
   btn.innerText = "❌";
+  btn.id = "cancel-li";
   btn.addEventListener("click", deleteToDo);
   li.appendChild(span);
   li.appendChild(btn);
@@ -28,7 +30,6 @@ function paintToDo(newTodoObj) {
 }
 function handleToDoSubmit(event) {
   event.preventDefault();
-  console.log(toDoInput.value);
   const newTodo = toDoInput.value;
   toDoInput.value = "";
   const newTodoObj = {
@@ -39,10 +40,17 @@ function handleToDoSubmit(event) {
   paintToDo(newTodoObj);
   saveToDos();
 }
-
+function showToDoList(event) {
+  event.preventDefault();
+  if (toDoList.classList.value !== "hidden" && toDos.length >= 1) {
+    toDoList.classList.add("hidden");
+  } else {
+    toDoList.classList.remove("hidden");
+  }
+}
+toDoList_btn.addEventListener("click", showToDoList);
 toDoForm.addEventListener("submit", handleToDoSubmit);
 
-function sayHello() {}
 const savedToDos = localStorage.getItem(TODOS_KEY);
 
 if (savedToDos !== null) {

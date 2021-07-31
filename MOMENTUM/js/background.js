@@ -6,3 +6,5 @@ const bgImage = document.createElement("img");
 bgImage.src = `${chosenImage}`;
 
 document.body.appendChild(bgImage);
+
+bgImage.id = "background";
